@@ -43,6 +43,9 @@ import { Options, Vue } from 'vue-class-component'
   }
 })
 export default class HelloWorld extends Vue {
+  // HelloWorld这个组件中，就是msg后面加了一个!，在typescript中这种写法的意思就是!前面的这个变量一定不是undefined或者null，!叫非空断言操作符。
+  // 非空断言操作符 !  可以消除编辑器 当msg为undefined时候报错
+  // 使用时注意 保证msg不为undefined，否则运行时会报错
   msg!: string
 }
 </script>
